@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('telegram_id');
             $table->string('username');
-            $table->unsignedInteger('cash');
-            $table->unsignedInteger('coins');
-            $table->unsignedInteger('total_coins');
-            $table->unsignedInteger('total_cash');
+            $table->unsignedInteger('cash')->default(0);
+            $table->unsignedInteger('coins')->default(1000);
+            $table->unsignedInteger('total_coins')->default(0);
+            $table->unsignedInteger('total_cash')->default(0);
             $table->timestamps();
         });
 
