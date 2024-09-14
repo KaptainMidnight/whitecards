@@ -7,9 +7,11 @@
         <title>Whitecards</title>
 
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
     <body>
         @yield('content')
+
+        @stack('scripts')
     </body>
 </html>
