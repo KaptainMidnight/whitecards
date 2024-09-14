@@ -8,9 +8,6 @@ use App\Http\Requests\AuthenticationRequest;
 
 class AuthenticationController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(AuthenticationRequest $request, Authentication $authentication): array
     {
         return [

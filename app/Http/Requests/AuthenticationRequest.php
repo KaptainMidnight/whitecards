@@ -14,8 +14,10 @@ class AuthenticationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => ['required', 'string', 'min:5', 'max:255'],
-            'id' => ['required', 'numeric'],
+            'query_id' => 'required|string',
+            'user' => 'required|json',
+            'auth_date' => 'required|integer|digits:10',
+            'hash' => 'required|string|size:64',
         ];
     }
 }
